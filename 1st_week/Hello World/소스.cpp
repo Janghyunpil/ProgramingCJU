@@ -1,5 +1,5 @@
 #include <stdio.h>
-int main(void)                         //50p 3¹ø
+int main(void)
 {
 	printf("Hello World\n");
 	return 0;
