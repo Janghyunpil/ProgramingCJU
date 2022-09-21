@@ -6,7 +6,6 @@
 
 int main(void)
 {
-
 	int kor = 3, eng = 5, mat = 4;
 
 	int credits = kor + eng + mat;
@@ -22,5 +21,4 @@ int main(void)
 	printf("Taehee's resurt status:(%d)\n", res);
 
 	return 0;
-
 }

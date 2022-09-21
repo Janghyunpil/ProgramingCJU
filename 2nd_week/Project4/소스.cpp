@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#define BMILOW 20				//120p 도전실전예제
+#define BMILOW 20
 #define BMIHIGH 25
 #define CM2M 0.01
 
