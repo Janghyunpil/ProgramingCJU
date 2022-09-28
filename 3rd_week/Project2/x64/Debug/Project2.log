@@ -1,4 +1,4 @@
 ﻿  소스.cpp
-C:\Users\Cju\Documents\GitHub\ProgramingCJU\3rd_week\Project2\소스.cpp(13,15): warning C4804: '<=': 연산에 'bool' 형식을 사용하는 것은 안전하지 않습니다.
-C:\Users\Cju\Documents\GitHub\ProgramingCJU\3rd_week\Project2\소스.cpp(28,15): warning C4804: '<=': 연산에 'bool' 형식을 사용하는 것은 안전하지 않습니다.
+C:\Users\Cju\Documents\GitHub\ProgramingCJU\3rd_week\Project2\소스.cpp(14,15): warning C4804: '<=': 연산에 'bool' 형식을 사용하는 것은 안전하지 않습니다.
+C:\Users\Cju\Documents\GitHub\ProgramingCJU\3rd_week\Project2\소스.cpp(29,15): warning C4804: '<=': 연산에 'bool' 형식을 사용하는 것은 안전하지 않습니다.
   Project2.vcxproj -> C:\Users\Cju\Documents\GitHub\ProgramingCJU\3rd_week\Project2\x64\Debug\Project2.exe

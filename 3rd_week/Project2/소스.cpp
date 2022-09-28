@@ -3,6 +3,7 @@ int main()
 {
 	int age = 0, chest = 0;
 	char size;
+	printf("나이와 가슴둘레를 입력해주세요. ");
 	scanf_s("%d%d", &age, &chest);
 	if (age < 20)
 	{
