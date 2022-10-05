@@ -1,5 +1,5 @@
 #include <stdio.h>
-int SUM(int x, int y);
+int ADD(int x, int y);
 int SUB(int x, int y);
 int MUL(int x, int y);
 int DIV(int x, int y);
@@ -11,7 +11,7 @@ int main()
 	scanf_s("%d %c %d", &A, &Ch, 1, &B);
 	if (Ch == '+')
 	{
-		E = SUM(A,B);
+		E = ADD(A,B);
 	}
 	else if (Ch == '-')
 	{
@@ -28,7 +28,7 @@ int main()
 	printf("°á°ú°ª : %d", E);
 	return 0;
 }
-int SUM(int x, int y) 
+int ADD(int x, int y) 
 {
 	int Res;
 	Res = x + y;
