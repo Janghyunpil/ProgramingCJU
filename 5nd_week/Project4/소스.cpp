@@ -1,11 +1,15 @@
 #include <stdio.h>
-int rec_func(int n);
-int main()
+int rec_sum(int n);
+int main(void)
 {
-	int sum = rec_func(1);
-	printf("%d", sum);
+    int res;
+    res = rec_sum(1);
+    printf("result : %d\n", res);
+    return 0;
 }
-int rec_func(int n) {
-	if (n == 10) return ;
-	rec_func(n + 1);
+
+int rec_sum(int n)
+{
+    if (n == 10) return 10;
+    else return (n + rec_sum(n + 1));
 }
