@@ -7,7 +7,7 @@ int main()
 	printf("숫자를 입력해주세요\n");
 	scanf_s("%d", &num);
 	int divsize=0;
-	int counter=1;
+	int counter=0;
 	for (int i = 1; i <= num; i++)
 	{
 		for (int j = 1; j <= i; j++)
@@ -25,7 +25,7 @@ int main()
 	
 	if (counter == CMAX)
 		{
-			counter = 1;
+			counter = 0;
 			printf("\n");
 		}	
 	divsize = 0;
