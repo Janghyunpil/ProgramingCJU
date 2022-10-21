@@ -1,9 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <math.h>
 
-#define END_COND 999
+#define MAX_COUNT 5
 
+int AVG(double x);
+int VAR(double x);
 void GenRandSeed()
 {
 	srand((unsigned int)(time(NULL)));
@@ -17,31 +20,46 @@ unsigned int GenRandNum(unsigned int nRange)
 	return nRes;
 }
 
+int AVG(double x)
+{
+	double avg = 0;
+	avg = x / MAX_COUNT;
+	return avg;
+}
+
+int VAR(double x)
+{
+	double var = 0;
+	var = x / MAX_COUNT;
+	return var;
+}
+
 int main(void)
 {
 	GenRandSeed();
-
+	int i, j;
+	int num[MAX_COUNT];
 	int nRange = 0;
-
-	while (1)
+	double  sum = 0, avg = 0, var = 0, dev = 0, std = 0;
+	printf("Input a single number, for generating the random number related to your input:\n");
+	scanf_s("%d", &nRange);
+	for ( i = 0; i < MAX_COUNT;i++)
 	{
-		printf("Input a single number, for generating the random number related to your input:\n");
-		printf("if you want to end the loop, please input 999\n");
-		scanf_s("%d", &nRange);
-
-		if (nRange == END_COND)
-		{
-			printf("end of the infinite while loop...\n");
-			break;
-		}
-		else
-		{
-			int nRes = GenRandNum(nRange);
-			printf("Result:random number generator, %d\n\n", nRes);
-		}
+		int nRes = GenRandNum(nRange);
+		num[i] = nRes;
+		sum = sum + num[i];
 	}
-
-	system("pause");
+	avg = AVG(sum);
+	for ( j = 0; j < MAX_COUNT; j++)
+	{
+		dev =dev + ((num[j] - avg)* (num[j] - avg));
+	}
+	var = VAR(dev);
+	std = sqrt(var);
+	printf("your number :%d %d %d %d %d\n",num[0], num[1], num[2], num[3], num[4]);
+	printf("averge:%.3f\n",avg);
+	printf("variation:%.3f\n",var);
+	printf("nstandard deviation:%.3f",std);
 	return 0;
 }
- int avg()
+

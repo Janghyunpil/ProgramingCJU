@@ -1,2 +1,4 @@
 ﻿  소스.cpp
+C:\Users\wkdgu\Documents\GitHub\ProgramingCJU\6th_week\Project2\소스.cpp(27,9): warning C4244: 'return': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\wkdgu\Documents\GitHub\ProgramingCJU\6th_week\Project2\소스.cpp(34,9): warning C4244: 'return': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   Project2.vcxproj -> C:\Users\wkdgu\Documents\GitHub\ProgramingCJU\6th_week\Project2\x64\Debug\Project2.exe
