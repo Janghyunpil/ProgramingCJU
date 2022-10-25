@@ -2,8 +2,6 @@
 
 #define DIGITs 4
 
-int COUNT(int x,int y);
-
 int COUNT(int x, int y) 
 {
 	int count = 0;
