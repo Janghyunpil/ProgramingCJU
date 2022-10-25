@@ -75,7 +75,7 @@ int main(void)
 	{
 		for (int j = 0; j < 2; j++)
 		{
-			MB[j][i] = MA[j][i];
+			MB[j][1-i] = MA[j][i];
 		}
 	}
 	printf("mA\n");
