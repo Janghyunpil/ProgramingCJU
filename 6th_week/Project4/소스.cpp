@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define LANGTH 10
+#define LENGTH 10
 
 void GenRandSeed()
 {
@@ -21,9 +21,9 @@ unsigned int GenRandNum(unsigned int nRange)
 void asc_Order(int a[])
 {
 	int temp;
-	for (int i = 0; i < LANGTH; i++)
+	for (int i = 0; i < LENGTH; i++)
 	{
-		for (int j = 0; j < LANGTH; j++)
+		for (int j = 0; j < LENGTH; j++)
 		{
 			if (*(a + i) > *(a + j))
 			{
@@ -34,16 +34,16 @@ void asc_Order(int a[])
 		}
 	}
 	printf("오름차순 :");
-	for (int k = 0; k < LANGTH; k++) printf("%d ", *(a + k));
+	for (int k = 0; k < LENGTH; k++) printf("%d ", *(a + k));
 	printf("\n");
 }
 
 void des_Order(int a[])
 {
 	int temp;
-	for (int i = 0; i < LANGTH; i++)
+	for (int i = 0; i < LENGTH; i++)
 	{
-		for (int j = 0; j  < LANGTH; j++)
+		for (int j = 0; j  < LENGTH; j++)
 		{
 			if (*(a + i) < *(a + j ))
 			{
@@ -54,7 +54,7 @@ void des_Order(int a[])
 		}
 	}
 	printf("내림차순 :");
-	for (int k = 0; k < LANGTH; k++) printf("%d ", *(a+k));
+	for (int k = 0; k < LENGTH; k++) printf("%d ", *(a+k));
 	printf("\n");
 }
 
@@ -62,11 +62,11 @@ int main(void)
 {
 	GenRandSeed();
 	int nRange = 0;
-	int array[LANGTH] ;
+	int array[LENGTH] ;
 	printf("입력받을 정수의 최대값을 입력해주세요.");
 	scanf_s("%d", &nRange);
 	printf("입력된 정수 : ");
-	for (int i = 0; i < LANGTH; i++)
+	for (int i = 0; i < LENGTH; i++)
 	{
 		array[i] = GenRandNum(nRange);
 		printf("%d ",array[i]);
