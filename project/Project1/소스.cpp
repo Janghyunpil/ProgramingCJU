@@ -59,7 +59,7 @@ int main(void)
 		//게임 종료 여부 확인
 		if (nRange == ENDCODE)
 		{
-			printf("게임을 종료합니다.");
+			printf("게임을 종료합니다.\n");
 			break;
 		}
 
@@ -106,6 +106,7 @@ int main(void)
 				}
 			}
 			else printf("실패! 처음으로 돌아갑니다.\n");
+			if (est_value == nRes) break;
 		}
 	}
 
