@@ -7,6 +7,6 @@ int main()
 	strcpy(str, "wine");
 	strcat(str, "apple");
 	strncpy(str, "pear", 1);
-	printf("%s,%d\n", str, (int)(strlen(str)));
+	printf("%s,%d\n", str, (strlen(str)));
 	return 0;
 }
