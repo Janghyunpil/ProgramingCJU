@@ -1,0 +1,11 @@
+﻿  소스.cpp
+C:\Users\wkdgu\OneDrive\문서\GitHub\ProgramingCJU\10th_week\Project3\Project3\소스.cpp(9,16): error C2079: 'basasak'은(는) 정의되지 않은 struct 'main::craker'을(를) 사용합니다.
+C:\Users\wkdgu\OneDrive\문서\GitHub\ProgramingCJU\10th_week\Project3\Project3\소스.cpp(11,10): warning C4473: 'scanf_s': 서식 문자열에 대한 인수가 충분하게 전달되지 않았습니다.
+C:\Users\wkdgu\OneDrive\문서\GitHub\ProgramingCJU\10th_week\Project3\Project3\소스.cpp(11,10): message : 자리 표시자 및 해당 매개 변수에는 variadic 인수가 2개 필요하지만 0개가 제공되었습니다.
+C:\Users\wkdgu\OneDrive\문서\GitHub\ProgramingCJU\10th_week\Project3\Project3\소스.cpp(11,10): message : 누락된 variadic 인수 1이(가) 서식 문자열 '%d'에 필요합니다.
+C:\Users\wkdgu\OneDrive\문서\GitHub\ProgramingCJU\10th_week\Project3\Project3\소스.cpp(12,9): warning C4473: 'printf': 서식 문자열에 대한 인수가 충분하게 전달되지 않았습니다.
+C:\Users\wkdgu\OneDrive\문서\GitHub\ProgramingCJU\10th_week\Project3\Project3\소스.cpp(12,9): message : 자리 표시자 및 해당 매개 변수에는 variadic 인수가 1개 필요하지만 0개가 제공되었습니다.
+C:\Users\wkdgu\OneDrive\문서\GitHub\ProgramingCJU\10th_week\Project3\Project3\소스.cpp(12,9): message : 누락된 variadic 인수 1이(가) 서식 문자열 '%d'에 필요합니다.
+C:\Users\wkdgu\OneDrive\문서\GitHub\ProgramingCJU\10th_week\Project3\Project3\소스.cpp(13,9): warning C4473: 'printf': 서식 문자열에 대한 인수가 충분하게 전달되지 않았습니다.
+C:\Users\wkdgu\OneDrive\문서\GitHub\ProgramingCJU\10th_week\Project3\Project3\소스.cpp(13,9): message : 자리 표시자 및 해당 매개 변수에는 variadic 인수가 1개 필요하지만 0개가 제공되었습니다.
+C:\Users\wkdgu\OneDrive\문서\GitHub\ProgramingCJU\10th_week\Project3\Project3\소스.cpp(13,9): message : 누락된 variadic 인수 1이(가) 서식 문자열 '%d'에 필요합니다.
