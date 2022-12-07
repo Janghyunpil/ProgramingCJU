@@ -2,6 +2,10 @@
 //
 #include <Servo.h>
 
+#define nRedpin 2
+#define nBluepin 3
+#define nPushSwPin 4
+#define nDelay 100
 #define MINANALOG 0
 #define MAXANALOG 1023
 #define MINDEGREE 0
@@ -9,56 +13,53 @@
 
 Servo myservo;
 
-int nRedPin = 2;
-int nBluePin = 3;
-int nPushSwPin = 4;
-int nDelay = 200;
+int P[]={nRedpin,nBluepin,nPushSwPin,nDelay};
+int *p=P;
 
-void GenLEDOutPut(int x,int y)
+void GenLEDOutPut(int x,int y,int z)
 {
   digitalWrite(x,y);
-  delay(nDelay);
+  delay(z);
 }
 
 void setup()
 {
-  myservo.attach(8); //서보모터를 8로 초기화
-  pinMode(nRedPin, OUTPUT);
-  pinMode(nBluePin, OUTPUT);
-  pinMode(nPushSwPin, INPUT);
+  myservo.attach(8);
+  pinMode(*(p+0), OUTPUT);
+  pinMode(*(p+1), OUTPUT);
+  pinMode(*(p+3), INPUT);
   Serial.begin(9600);
 }
 
 void loop()
 {
- if(digitalRead(nPushSwPin) == HIGH) //스위치 on off 여부 확인
+ if(digitalRead(*(p+2)) == HIGH)
  {
    Serial.print("Switch:ON\n");
    
    int readValue = analogRead(A0);
-   Serial.println(readValue);         //가변저항 값 읽어오기
-   int a = map(readValue,MINANALOG,MAXANALOG,MINDEGREE,MAXDEGREE);   //가변저항값의 범위를 원하는 각도값의 범위로 변경
-   
-   for(int i = 0;i<a;i++)       //입력받은 각도로 서보모터를 회전
+   Serial.println(readValue);
+   int a = map(readValue,MINANALOG,MAXANALOG,MINDEGREE,MAXDEGREE);
+   for(int i = 0;i<a;i++)
    {
      myservo.write(i);
    }
    
-   if(a<=90)      //서보모터가 90도 이하일 경우 빨간 불이 아닐경우 파란불이 깜박거리게 설정했습니다.
+   if(a<=90)
    {
-     GenLEDOutPut(nRedPin,HIGH);
-     GenLEDOutPut(nRedPin,LOW);
+     GenLEDOutPut(*(p+0),HIGH,*(p+3));
+     GenLEDOutPut(*(p+0),LOW,*(p+3));
    } 
    else
    {     
-     GenLEDOutPut(nBluePin,HIGH);
-     GenLEDOutPut(nBluePin,LOW);
+     GenLEDOutPut(*(p+1),HIGH,*(p+3));
+     GenLEDOutPut(*(P+1),LOW,*(p+3));
    }
  }
-  else          // 스위치가 꺼져있는경우 모든 LED 끄기
+  else
   {
     Serial.print("Switch:OFF\n");
-    GenLEDOutPut(nRedPin,LOW);
-    GenLEDOutPut(nBluePin,LOW);
+    GenLEDOutPut(*(p+0),LOW,*(p+3));
+    GenLEDOutPut(*(p+1),LOW,*(p+3));
   }
 }
